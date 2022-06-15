@@ -16,6 +16,9 @@ interface PhotoDao {
     @Query("SELECT * FROM photo_table")
     fun readAllData(): LiveData<List<Photo>>
 
+    @Query("DELETE FROM photo_table")
+    suspend fun deleteAllPhotos()
+
 
 
 

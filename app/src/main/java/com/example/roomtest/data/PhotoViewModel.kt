@@ -22,4 +22,10 @@ class PhotoViewModel(application: Application): AndroidViewModel(application) {
             repository.addPhotos(photo)
         }
     }
+
+    fun deleteAllPhotos(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllPhoto()
+        }
+    }
 }
